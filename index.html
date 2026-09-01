@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMEX PNP</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- REGISTRO DE OPERADOR -->
+
+<div id="registro-operador" class="registro-overlay">
+
+    <div class="registro-card">
+
+        <img
+            src="img/logo-transporte_files/de0de0c5-1b17-4084-9b0c-2dec5d469a05.png"
+            alt="CEMEX Transporte"
+            class="logo-registro"
+        >
+
+        <h2>Registro de operador</h2>
+
+        <p>Ingresa tus datos para consultar las ubicaciones.</p>
+
+        <input
+            type="text"
+            id="nombre-operador"
+            placeholder="Nombre del operador"
+            autocomplete="name"
+        >
+
+        <input
+            type="text"
+            id="id-empleado"
+            placeholder="ID de empleado"
+            inputmode="numeric"
+        >
+
+        <button id="btn-entrar">
+            ENTRAR
+        </button>
+
+    </div>
+
+</div>
+
+<header>
+
+    <!-- LOGO CEMEX TRANSPORTE -->
+    <div class="logo">
+        <img src="img/logo-transporte_files/156c20fc-b041-403e-a905-e91b845d92ee.png" alt="CEMEX Transporte">
+    </div>
+
+    <!-- TITULO -->
+    <div class="titulo-header">
+        <h1>ruta segura</h1>
+        <p>Sistema de consulta de paros no permitidos</p>
+    </div>
+
+    <!-- INDICADORES -->
+    <div class="indicadores-header">
+
+        <div class="indicador">
+            <div class="indicador-icono">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <strong>Más control</strong>
+                <span>en ruta</span>
+            </div>
+        </div>
+
+        <div class="indicador">
+            <div class="indicador-icono">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <strong>Rutas</strong>
+                <span>más seguras</span>
+            </div>
+        </div>
+
+        <div class="indicador">
+            <div class="indicador-icono">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <div>
+                <strong>Transporte</strong>
+                <span>con confianza</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FRANJAS DECORATIVAS -->
+    <div class="franjas-header">
+        <span class="franja-roja"></span>
+        <span class="franja-blanca"></span>
+        <span class="franja-azul"></span>
+    </div>
+
+</header>
+    <main>
+        <div class="mapa-contenedor">
+
+    <div class="titulo-mapa">
+
+        <div>
+            <h2>🗺️ Mapa de ubicaciones</h2>
+            <p>Sitios de paro no permitido</p>
+        </div>
+
+        <span class="contador">
+            17 confirmadas
+        </span>
+
+    </div>
+
+    <div id="mapa"></div>
+
+</div>
+
+        <div class="busqueda">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input
+    type="text"
+    id="buscador"
+    placeholder="Buscar ruta o ubicación..."
+    autocomplete="off"
+  >
+</div>
+        <section class="rutas">
+
+            <div class="card">
+                <i class="fa-solid fa-route"></i>
+
+                <h2>Coatzacoalcos → Villahermosa</h2>
+
+                <p>8 ubicaciones registradas</p>
+
+                <button>Ver Ruta</button>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-route"></i>
+
+                <h2>Coatzacoalcos → Cárdenas</h2>
+
+                <p>5 ubicaciones registradas</p>
+
+                <button>Ver Ruta</button>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-route"></i>
+
+                <h2>Las Choapas → Chiapa de Corzo</h2>
+
+                <p>6 ubicaciones registradas</p>
+
+                <button>Ver Ruta</button>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-route"></i>
+
+                <h2>puebla → tepeaca</h2>
+
+                <p>6 ubicaciones registradas</p>
+
+                <button>Ver Ruta</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

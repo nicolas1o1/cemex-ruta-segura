@@ -1,0 +1,1236 @@
+/*=========================
+    ESTILO GENERAL
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#e6edfd;
+    color:#1a1919;
+}
+
+/*=========================
+        ENCABEZADO
+==========================*/
+
+header{
+    background:#265a8d;
+    color:rgb(255, 255, 255);
+    text-align:center;
+    padding:35px 20px;
+    box-shadow:0 4px 15px rgba(5, 5, 5, 0.15);
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    font-size:38px;
+}
+
+.logo h1{
+    font-size:32px;
+}
+
+header p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+/*=========================
+      CONTENIDO
+==========================*/
+
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:30px;
+}
+
+/*=========================
+       BUSCADOR
+==========================*/
+
+.busqueda{
+    background:white;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 20px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    margin-bottom:35px;
+}
+
+.busqueda i{
+    color:#003b75;
+    font-size:20px;
+}
+
+.busqueda input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:16px;
+}
+
+/*=========================
+       TARJETAS
+==========================*/
+
+.rutas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.30s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    color:#003b75;
+
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    margin-bottom:10px;
+
+    color:#003b75;
+
+}
+
+.card p{
+
+    color:#777;
+
+    margin-bottom:25px;
+
+}
+
+.card button{
+
+    background:#ffb600;
+
+    color:#003b75;
+
+    border:none;
+
+    padding:12px 30px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:#003b75;
+
+    color:white;
+
+}
+/* =========================
+   DETALLE DE UBICACIÓN
+========================= */
+
+.detalle {
+    max-width: 700px;
+    margin: auto;
+}
+
+.btn-regresar {
+    background: transparent;
+    border: none;
+    color: #003b75;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.detalle-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+
+.icono-ubicacion {
+    font-size: 55px;
+    color: #003b75;
+    margin-bottom: 15px;
+}
+
+.detalle-card h2 {
+    color: #003b75;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.detalle-card h3 {
+    color: #777;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.foto-placeholder {
+    height: 280px;
+    background: #eef3f8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #7a7a7a;
+    margin-bottom: 25px;
+}
+
+.foto-placeholder i {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.btn-maps {
+    width: 100%;
+    background: #003b75;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-maps:hover {
+    background: #ffb600;
+    color: #003b75;
+}
+/* =========================
+   MAPA
+========================= */
+
+.mapa-contenedor {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.titulo-mapa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.titulo-mapa h2 {
+    color: #003b75;
+    margin-bottom: 5px;
+}
+
+.titulo-mapa p {
+    color: #777;
+}
+
+.contador {
+    background: #e8f0f8;
+    color: #003b75;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#mapa {
+    width: 100%;
+    height: 400px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+/* =========================
+   MARCADORES ROJOS
+========================= */
+
+.marcador-rojo {
+    background: #d71920;
+    color: white;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    border: 3px solid white;
+    box-shadow: 0 3px 8px rgba(0,0,0,.35);
+}
+
+.marcador-rojo::first-letter {
+    transform: rotate(45deg);
+}
+/* =========================
+   PANTALLA DE RUTAS
+========================= */
+
+.ruta-detalle {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.ruta-encabezado {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.ruta-encabezado h2 {
+    color: #003b75;
+    margin-bottom: 8px;
+}
+
+.ruta-encabezado p {
+    color: #777;
+}
+
+.ubicaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.ubicacion {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: .3s;
+}
+
+.ubicacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.12);
+}
+
+.ubicacion-icono {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fde8e8;
+    color: #d71920;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.ubicacion h3 {
+    color: #003b75;
+    margin: 0;
+}
+
+.ubicacion p {
+    color: #777;
+    margin: 0;
+}
+
+.ubicacion .estado {
+    color: #d71920;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.ubicacion button {
+    background: #003b75;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ubicacion button:hover {
+    background: #d71920;
+}
+
+.btn-regresar {
+    margin-bottom: 20px;
+}
+/* =========================
+   FOTOGRAFÍA DE UBICACIÓN
+========================= */
+
+.foto-real {
+    width: 100%;
+    max-width: 650px;
+    height: 320px;
+    margin: 20px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #eef2f5;
+}
+
+.foto-real img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* =========================
+   VISOR DE FOTOGRAFÍA
+========================= */
+
+.foto-real img {
+    cursor: pointer;
+}
+
+.texto-foto {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.visor-foto {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.visor-foto img {
+    max-width: 95%;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.cerrar-foto {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d71920;
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.nombre-foto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,.75);
+    color: white;
+
+    padding: 10px 20px;
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+/* =========================
+   LOGO CEMEX TRANSPORTE
+========================= */
+/* =========================================
+   ENCABEZADO CEMEX TRANSPORTE
+   ========================================= */
+
+header {
+    width: 100%;
+    height: 155px;
+
+    background: linear-gradient(
+        115deg,
+        #063b7a 0%,
+        #06488f 55%,
+        #07549d 100%
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 0 32px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .20);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+    width: 35%;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    z-index: 5;
+}
+
+.logo img {
+    width: 390px;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,.20));
+}
+
+
+/* =========================================
+   TITULO CENTRAL
+   ========================================= */
+
+.titulo-header {
+    width: 29%;
+
+    padding-left: 28px;
+
+    border-left: 2px solid rgba(255,255,255,.35);
+
+    position: relative;
+    z-index: 5;
+}
+
+.titulo-header h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    text-transform: lowercase;
+}
+
+.titulo-header h1::after {
+    content: "";
+
+    display: block;
+
+    width: 310px;
+    max-width: 100%;
+
+    height: 4px;
+
+    background: #ed1c24;
+
+    margin: 9px auto 0;
+
+    border-radius: 10px;
+}
+
+
+.titulo-header p {
+    margin: 9px 0 0;
+
+    color: white;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+
+    opacity: .92;
+}
+
+
+/* =========================================
+   INDICADORES
+   ========================================= */
+
+.indicadores-header {
+    width: 36%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 9px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.indicador {
+    min-width: 125px;
+
+    height: 55px;
+
+    padding: 7px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: rgba(0, 45, 100, .50);
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+
+    backdrop-filter: blur(4px);
+}
+
+.indicador-icono {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: #07509a;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.indicador strong {
+    display: block;
+
+    color: white;
+
+    font-size: 12px;
+
+    line-height: 1.1;
+}
+
+.indicador span {
+    display: block;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   FRANJAS ROJO / BLANCO / AZUL
+   ========================================= */
+
+.franjas-header {
+    position: absolute;
+
+    right: -55px;
+    top: -55px;
+
+    width: 125px;
+    height: 260px;
+
+    transform: rotate(30deg);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.franjas-header span {
+    position: absolute;
+
+    top: 0;
+
+    height: 100%;
+
+    display: block;
+}
+
+.franja-roja {
+    width: 38px;
+
+    right: 75px;
+
+    background: #ed1c24;
+}
+
+.franja-blanca {
+    width: 27px;
+
+    right: 39px;
+
+    background: white;
+}
+
+.franja-azul {
+    width: 24px;
+
+    right: 5px;
+
+    background: #063b7a;
+}
+
+
+/* =========================================
+   ARCO DECORATIVO
+   ========================================= */
+
+header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 220px;
+
+    right: 180px;
+    top: -205px;
+
+    border: 3px solid rgba(255,255,255,.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   AJUSTE PARA PANTALLA 1366
+   ========================================= */
+
+@media (max-width: 1400px) {
+
+    header {
+        padding: 0 25px;
+    }
+
+    .logo {
+        width: 34%;
+    }
+
+    .logo img {
+        width: 350px;
+    }
+
+    .titulo-header {
+        width: 29%;
+        padding-left: 22px;
+    }
+
+    .titulo-header h1 {
+        font-size: 35px;
+    }
+
+    .indicadores-header {
+        width: 37%;
+        gap: 6px;
+    }
+
+    .indicador {
+        min-width: 110px;
+        padding: 6px 8px;
+    }
+
+    .indicador strong {
+        font-size: 11px;
+    }
+
+    .indicador span {
+        font-size: 9px;
+    }
+}
+/* =========================================
+   VERSION PARA CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* ==============================
+       ENCABEZADO
+       ============================== */
+
+    header {
+        height: auto;
+        min-height: 330px;
+
+        padding: 20px 15px 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        overflow: hidden;
+    }
+
+
+    /* ==============================
+       LOGO
+       ============================== */
+
+    .logo {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        order: 1;
+    }
+
+    .logo img {
+        width: 280px;
+        max-width: 90%;
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* ==============================
+       TITULO
+       ============================== */
+
+    .titulo-header {
+        width: 100%;
+
+        padding: 0;
+
+        border-left: none;
+
+        text-align: center;
+
+        order: 2;
+    }
+
+    .titulo-header h1 {
+        font-size: 34px;
+
+        line-height: 1.05;
+
+        margin: 0;
+    }
+
+    .titulo-header h1::after {
+        width: 220px;
+
+        height: 3px;
+
+        margin: 8px auto 0;
+    }
+
+    .titulo-header p {
+        font-size: 12px;
+
+        margin-top: 8px;
+
+        line-height: 1.3;
+    }
+
+
+    /* ==============================
+       INDICADORES
+       ============================== */
+
+    .indicadores-header {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 6px;
+
+        margin-top: 8px;
+
+        order: 3;
+    }
+
+    .indicador {
+        width: 100%;
+
+        min-width: 0;
+
+        height: 60px;
+
+        padding: 6px 4px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 3px;
+
+        border-radius: 10px;
+    }
+
+    .indicador-icono {
+        width: 27px;
+        height: 27px;
+
+        min-width: 27px;
+
+        font-size: 12px;
+    }
+
+    .indicador strong {
+        font-size: 10px;
+
+        line-height: 1;
+    }
+
+    .indicador span {
+        font-size: 8px;
+
+        margin-top: 1px;
+    }
+
+
+    /* ==============================
+       FRANJAS
+       ============================== */
+
+    .franjas-header {
+        right: -85px;
+
+        top: -70px;
+
+        transform: rotate(30deg);
+
+        opacity: .9;
+
+        z-index: 1;
+    }
+
+
+    /* ==============================
+       CONTENIDO PRINCIPAL
+       ============================== */
+
+    main {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: 15px;
+    }
+
+
+    /* ==============================
+       MAPA
+       ============================== */
+
+    .mapa-contenedor {
+        width: 100%;
+
+        padding: 15px;
+
+        margin-bottom: 18px;
+
+        border-radius: 18px;
+    }
+
+    .titulo-mapa {
+        gap: 10px;
+
+        align-items: flex-start;
+    }
+
+    .titulo-mapa h2 {
+        font-size: 22px;
+
+        line-height: 1.15;
+    }
+
+    .titulo-mapa p {
+        font-size: 13px;
+
+        margin-top: 5px;
+    }
+
+    .contador {
+        flex-shrink: 0;
+
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+    #mapa {
+        width: 100%;
+
+        height: 420px;
+
+        border-radius: 14px;
+    }
+
+
+    /* ==============================
+       BUSCADOR
+       ============================== */
+
+    .busqueda {
+        width: 100%;
+
+        padding: 14px 16px;
+
+        margin-bottom: 20px;
+
+        border-radius: 14px;
+    }
+
+    .busqueda input {
+        font-size: 15px;
+    }
+
+
+    /* ==============================
+       TARJETAS DE RUTAS
+       ============================== */
+
+    .rutas {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+
+        padding: 22px;
+
+        border-radius: 16px;
+    }
+
+    .card i {
+        font-size: 42px;
+
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+
+        line-height: 1.25;
+    }
+
+    .card p {
+        font-size: 14px;
+
+        margin-bottom: 18px;
+    }
+
+    .card button {
+        width: 100%;
+    }
+}
+/* ==============================
+   REGISTRO DE OPERADOR
+   ============================== */
+
+.registro-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 47, 92, 0.96);
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.registro-card {
+    width: 100%;
+    max-width: 420px;
+
+    background: rgb(2, 20, 75);
+    border-radius: 24px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.logo-registro {
+    width: 180px;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.registro-card h2 {
+    color: #fbfdff;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.registro-card p {
+    color: #f10909;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.registro-card input {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 2px solid #e1e7ee;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.registro-card input:focus {
+    border-color: #003b75;
+}
+
+.registro-card button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #003b75;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.registro-card button:hover {
+    background: #d71920;
+}
