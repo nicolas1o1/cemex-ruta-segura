@@ -626,7 +626,7 @@ if (contadorUbicaciones) {
 const URL_REGISTRO =
     "https://script.google.com/macros/s/AKfycbyEvQ5F1EI8o0l7hPW4__2QzZAC9hnoyOdVnFkWH98Bnm_6Xs77R1pGtFMetDicFwM/exec";
 
-const TIEMPO_SESION = 1* 60 * 1000;
+const TIEMPO_SESION = 10* 60 * 1000;
 
 const registroOperador = document.getElementById("registro-operador");
 const botonEntrar = document.getElementById("btn-entrar");
